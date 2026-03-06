@@ -1,168 +1,107 @@
-body{
-
-    background:#e9e9e9;
-    font-family:Arial;
-    margin:0;
-
+/* Genel Ayarlar */
+* {
+    box-sizing: border-box; /* Padding ve border artık genişliği bozmaz */
 }
 
-/* container */
-
-.container{
-
-    width:900px;
-    margin:40px auto;
-    background:white;
-    border-radius:6px;
-    padding:20px;
-
+body {
+    background: #e9e9e9;
+    font-family: Arial, sans-serif;
+    margin: 0;
 }
 
-/* header */
-
-header{
-
-    border-bottom:2px solid #c9d5e5;
-    padding-bottom:10px;
-
+/* Container */
+.container {
+    width: 900px;
+    margin: 40px auto;
+    background: white;
+    border-radius: 6px;
+    padding: 20px;
 }
 
-/* hiyerarşik seçici */
-
-header h1{
-
-    display:inline-block;
-    margin:0;
-
+/* Header & Nav */
+header {
+    border-bottom: 2px solid #c9d5e5;
+    padding-bottom: 10px;
+    display: flex; /* Başlık ve menüyü yan yana tutar */
+    justify-content: space-between;
+    align-items: center;
 }
 
-/* menu */
-
-nav{
-
-    float:right;
-
+header h1 {
+    margin: 0;
+    color: #333;
 }
 
-nav ul{
-
-    list-style:none;
-    margin:0;
-    padding:0;
-
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
 }
 
-nav ul li{
-
-    display:inline-block;
-
+nav ul li {
+    display: inline-block;
 }
 
-nav ul li a{
-
-    text-decoration:none;
-    padding:8px 14px;
-    color:#444;
-    border-radius:4px;
-
+nav ul li a {
+    text-decoration: none;
+    padding: 8px 14px;
+    color: #444;
+    border-radius: 4px;
 }
 
-/* hover */
-
-nav ul li a:hover{
-
-    background:#4a79c7;
-    color:white;
-
+nav ul li a:hover, .active {
+    background: #4a79c7;
+    color: white;
 }
 
-.active{
-
-    background:#4a79c7;
-    color:white;
-
+/* Intro Bölümü */
+.intro {
+    margin-top: 20px;
+    padding: 10px 0;
 }
 
-/* intro */
-
-.intro{
-
-    margin-top:20px;
-    padding:10px;
-
+/* Layout - Kutuların Yan Yana Geldiği Yer */
+.main-layout {
+    display: flex;      /* Kutuları yan yana getirir */
+    gap: 20px;          /* Kutuların arasındaki o istediğin boşluk */
+    margin-top: 20px;
 }
 
-/* main layout */
-
-main{
-
-    margin-top:20px;
-
+/* İçerik Kutusu */
+.content {
+    flex: 6;            /* Genişlik oranı (yaklaşık %60) */
+    background: #f5e4c4;
+    padding: 20px;
+    border: 1px solid #e0cfa6;
+    border-radius: 6px;
 }
 
-/* içerik */
-
-.content{
-
-    display:inline-block;
-    width:58%;
-    background:#f5e4c4;
-    padding:20px;
-    border:1px solid #e0cfa6;
-    border-radius:6px;
-    vertical-align:top;
-
+/* Sidebar Kutusu */
+.sidebar {
+    flex: 4;            /* Genişlik oranı (yaklaşık %40) */
+    background: #d8e5ec;
+    padding: 20px;
+    border: 1px solid #b8cbd6;
+    border-radius: 6px;
 }
 
-/* sidebar */
+/* Metin Düzenleri */
+h2 { color: #333; margin-top: 0; }
 
-.sidebar{
-
-    display:inline-block;
-    width:38%;
-    background:#d8e5ec;
-    padding:20px;
-    border:1px solid #b8cbd6;
-    border-radius:6px;
-    margin-left:20px;
-
+p {
+    font-size: 15px;
+    line-height: 1.6;
+    color: #333;
 }
 
-/* metin düzenleme */
+.content p { text-align: justify; }
 
-.content p{
-
-    font-size:15px;
-    line-height:1.6;
-    text-align:justify;
-    color:#333;
-
-}
-
-.sidebar p{
-
-    font-size:15px;
-    line-height:1.6;
-    text-align:left;
-    color:#333;
-
-}
-
-/* footer */
-
-footer{
-
-    margin-top:30px;
-    text-align:center;
-    color:#666;
-    font-size:14px;
-
-}
-
-/* grup seçici */
-
-h1, h2{
-
-    color:#333;
-
+/* Footer */
+footer {
+    margin-top: 30px;
+    text-align: center;
+    color: #666;
+    font-size: 14px;
+    border-top: 1px solid #eee;
+    padding-top: 15px;
 }
