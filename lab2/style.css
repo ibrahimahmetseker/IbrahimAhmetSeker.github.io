@@ -1,6 +1,6 @@
 /* Genel Ayarlar */
 * {
-    box-sizing: border-box; /* Padding ve border artık genişliği bozmaz */
+    box-sizing: border-box; 
 }
 
 body {
@@ -63,7 +63,7 @@ nav ul li a:hover, .active {
 /* Layout - Kutuların Yan Yana Geldiği Yer */
 .main-layout {
     display: flex;      /* Kutuları yan yana getirir */
-    gap: 20px;          /* Kutuların arasındaki o istediğin boşluk */
+    gap: 20px;          /* Kutuların arasındaki boşluk */
     margin-top: 20px;
 }
 
