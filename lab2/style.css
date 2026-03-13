@@ -1,6 +1,8 @@
-/* Genel Ayarlar */
+/* =========================================
+   1. GENEL AYARLAR VE LAYOUT
+   ========================================= */
 * {
-    box-sizing: border-box; 
+    box-sizing: border-box; /* Box Model gereksinimi için kritik */ [cite: 13]
 }
 
 body {
@@ -9,7 +11,7 @@ body {
     margin: 0;
 }
 
-/* Container */
+/* Ana Konteynır */
 .container {
     width: 900px;
     margin: 40px auto;
@@ -18,11 +20,11 @@ body {
     padding: 20px;
 }
 
-/* Header & Nav */
+/* Header & Navigasyon */
 header {
     border-bottom: 2px solid #c9d5e5;
     padding-bottom: 10px;
-    display: flex; /* Başlık ve menüyü yan yana tutar */
+    display: flex;
     justify-content: space-between;
     align-items: center;
 }
@@ -54,49 +56,117 @@ nav ul li a:hover, .active {
     color: white;
 }
 
-/* Intro Bölümü */
-.intro {
-    margin-top: 20px;
-    padding: 10px 0;
-}
-
-/* Layout - Kutuların Yan Yana Geldiği Yer */
+/* Sayfa İçerik Yapısı (Flexbox) */
 .main-layout {
-    display: flex;      /* Kutuları yan yana getirir */
-    gap: 20px;          /* Kutuların arasındaki boşluk */
+    display: flex;
+    gap: 20px;
     margin-top: 20px;
 }
 
-/* İçerik Kutusu */
 .content {
-    flex: 6;            /* Genişlik oranı (yaklaşık %60) */
+    flex: 6;
     background: #f5e4c4;
     padding: 20px;
     border: 1px solid #e0cfa6;
     border-radius: 6px;
+    text-align: justify;
 }
 
-/* Sidebar Kutusu */
 .sidebar {
-    flex: 4;            /* Genişlik oranı (yaklaşık %40) */
+    flex: 4;
     background: #d8e5ec;
     padding: 20px;
     border: 1px solid #b8cbd6;
     border-radius: 6px;
 }
 
-/* Metin Düzenleri */
-h2 { color: #333; margin-top: 0; }
+/* =========================================
+   2. LAB 3: İLETİŞİM FORMU STİLLERİ
+   ========================================= */
 
-p {
-    font-size: 15px;
-    line-height: 1.6;
-    color: #333;
+/* Form Konteynırı (Box Model Kullanımı) */
+.contact-container {
+    width: 600px; /* Belirlenen genişlik */ [cite: 14]
+    margin: 40px auto; /* Sayfayı ortalama */ [cite: 14]
+    padding: 30px; /* Elemanların kenarlara yapışmaması için */ [cite: 15]
+    border: 1px solid #ddd; /* Belirgin kenarlık */ [cite: 16]
+    border-radius: 10px; /* Hafif köşe yuvarlaması */ [cite: 16]
+    background-color: #ffffff;
 }
 
-.content p { text-align: justify; }
+.contact-container h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
 
-/* Footer */
+.contact-container label {
+    display: block; /* Etiketleri ayrı satıra alır */ [cite: 7]
+    margin-top: 15px;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+/* Form Elemanları (Çoklu Seçici Kullanımı) */
+.contact-container input, 
+.contact-container select, 
+.contact-container textarea {
+    width: 100%; /* Alanın tamamını kaplar */ [cite: 18, 22]
+    padding: 10px; /* Yazıların ferah durması için */ [cite: 19, 22]
+    margin-bottom: 15px; /* Elemanlar arası boşluk */ [cite: 20, 22]
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* Görseldeki Gri Arka Planlı Seçim Alanları */
+.selection-box {
+    background-color: #f9f9f9;
+    padding: 15px;
+    border-radius: 6px;
+    margin-bottom: 15px;
+}
+
+.inline-label {
+    display: inline !important;
+    font-weight: normal !important;
+    margin-left: 5px;
+}
+
+/* Buton Düzenlemeleri */
+.button-row {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.btn-submit {
+    flex: 1;
+    background-color: #007bff; /* Görseldeki mavi */ 
+    color: white;
+    padding: 12px; /* Butonu büyütmek için */ 
+    border: none; /* Kenarlığı kaldırma */ 
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.btn-reset {
+    flex: 1;
+    background-color: #dc3545; /* Görseldeki kırmızı */ 
+    color: white;
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.btn-submit:hover, .btn-reset:hover {
+    opacity: 0.9;
+}
+
+/* =========================================
+   3. FOOTER
+   ========================================= */
 footer {
     margin-top: 30px;
     text-align: center;
